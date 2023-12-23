@@ -36,8 +36,8 @@ const sym2 = Symbol('Hello')
 // Array, Object, Functions --  datatypes are object
 const heros = ["Hanuman", "IronMan", "Batman"] // array uses []
 
-console.log(heros);
-console.log(typeof heros);
+// console.log(heros);
+// console.log(typeof heros);
 
 // Object uses {}
 let myDetail = {
@@ -46,13 +46,37 @@ let myDetail = {
     gender:"male"
 }
 
-console.log(myDetail);
-console.log(typeof myDetail);
+// console.log(myDetail);
+// console.log(typeof myDetail);
 
 // function as varaible -- datatype is function object
 const myFunc = function(){
     console.log("Hello Rahul - Inside function");
 }
 
-console.log(myFunc);
-console.log(typeof myFunc);
+// console.log(myFunc);
+// console.log(typeof myFunc);
+
+
+// Memory in JS
+// Primitive Data types are stored in Stack - means call by value - copy is passed
+// Non-Primitive Data types are stored in Heap. Variable name in stack but value in heap.
+// means call by refernce - same data is modified.
+
+let string1 = "youtube.com"
+let string2 = string1
+string2 = "snapchat.com"
+
+console.log(string1);
+console.log(string2);
+
+let user1 ={
+    email : "rahul@gmail.com",
+    city : "Pune"
+}
+
+let user2 = user1
+user2.email = "another_user@gmail.com"
+
+console.log(user1);
+console.log(user2);
